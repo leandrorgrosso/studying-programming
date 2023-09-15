@@ -1,1 +1,1 @@
-# study-js-seven-days
+# repository intended for the study of programming
