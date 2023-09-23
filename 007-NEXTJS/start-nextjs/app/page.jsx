@@ -1,17 +1,20 @@
 import Receita from "../components/Receita";
 import Quadrado from "../components/Quadrado";
 import HeaderProps from "../components/HeaderProps";
+import { Cartao } from "../components/Cartao";
 
 function Home(){
   return (
     <div>
-      <div>Home</div>
+      <div>Pagina Home</div>
 
-      <HeaderProps pedido="🍕 Pizza" sobremesa="🍦 Sorvete" />
-      <HeaderProps pedido="🍔 Lanche" sobremesa="🍰 Bolo" />
+      {/* <HeaderProps pedido="🍕 Pizza" sobremesa="🍦 Sorvete" /> */}
+      {/* <HeaderProps pedido="🍔 Lanche" sobremesa="🍰 Bolo" /> */}
 
       {/* <Quadrado /> */}
-      <Receita/>
+      {/* <Receita/> */}
+
+      <Cartao textoDaFrase="Algum texto da frase" autorDaFrase="Autor da Frase"/>
 
     </div>
   );
