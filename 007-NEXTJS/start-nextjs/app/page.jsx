@@ -6,6 +6,7 @@ import { listaPessoa } from "../data/listaPessoa";
 
 function Home() {
   const lista = listaPessoa.map((pessoa) => <li>{pessoa.nome}</li>);
+  const corPreferida = listaPessoa.filter((pessoa) => pessoa.cor === "roxo");
   return (
     <div>
       <div>Pagina Home</div>
@@ -18,15 +19,26 @@ function Home() {
 
       {/* <Cartao textoDaFrase="Algum texto da frase" autorDaFrase="Autor da Frase"/> */}
 
-      {listaPessoa.length > 0 && (
-        <ul>
-          {/* {lista} */}
-          {listaPessoa.map((pessoa) => (
-            <li key={pessoa.id}>
-              {pessoa.nome} - {pessoa.altura}
-            </li>
-          ))}
-        </ul>
+      {/* {listaPessoa.length > 0 && ( */}
+      {/* <ul> */}
+      {/* {lista} */}
+      {/* {listaPessoa.map((pessoa) => ( */}
+      {/* <li key={pessoa.id}> */}
+      {/* {pessoa.nome} - {pessoa.altura} */}
+      {/* </li> */}
+      {/* ))} */}
+      {/* </ul> */}
+      {/* )} */}
+
+      {corPreferida.length > 0 && (
+        <>
+          <h1>Cor preferida</h1>
+          <ul>
+            {corPreferida.map((pessoa) => (
+              <li key={pessoa.id}>{pessoa.nome}</li>
+            ))}
+          </ul>
+        </>
       )}
     </div>
   );
