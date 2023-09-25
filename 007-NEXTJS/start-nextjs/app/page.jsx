@@ -30,16 +30,16 @@ function Home() {
       {/* </ul> */}
       {/* )} */}
 
-      {corPreferida.length > 0 && (
-        <>
-          <h1>Cor preferida</h1>
-          <ul>
-            {corPreferida.map((pessoa) => (
-              <li key={pessoa.id}>{pessoa.nome}</li>
-            ))}
-          </ul>
-        </>
-      )}
+      {/* {corPreferida.length > 0 && ( */}
+        {/* <> */}
+          {/* <h1>Cor preferida</h1> */}
+          {/* <ul> */}
+            {/* {corPreferida.map((pessoa) => ( */}
+              {/* <li key={pessoa.id}>{pessoa.nome}</li> */}
+            {/* ))} */}
+          {/* </ul> */}
+        {/* </> */}
+      {/* )} */}
     </div>
   );
 }
