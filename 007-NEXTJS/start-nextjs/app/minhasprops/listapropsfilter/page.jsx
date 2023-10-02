@@ -1,7 +1,7 @@
 import { listaPessoa } from "@/data/listaPessoa";
 
 function ListaPropsFilter() {
-  const corPreferida = listaPessoa.filter((pessoa) => pessoa.cor === "roxo");
+  const corPreferida = listaPessoa.filter((variavelAqui) => variavelAqui.cor === "roxo");
 
   return (
     <>
