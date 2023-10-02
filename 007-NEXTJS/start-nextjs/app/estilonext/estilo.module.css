@@ -1,0 +1,19 @@
+.azul {
+  color: blue;
+  font-size: 28px;
+}
+
+.verde {
+  color: green;
+}
+
+.vermelho {
+  color: red;
+}
+
+#integracaoComId{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
