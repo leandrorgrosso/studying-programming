@@ -1,0 +1,25 @@
+.vermelho {
+    color: red;
+  }
+  
+  .azul {
+    color: blue;
+  }
+  
+  .amarelo {
+    color: yellow;
+    background-color: yellowgreen;
+  }
+  
+  .sobre1 .verde {
+    color: green;
+  }
+  
+  .sobre1 .verde a {
+    background-color: black;
+  }
+  
+  .sobre1 .textoEstilo {
+    background-color: blueviolet;
+  }
+  

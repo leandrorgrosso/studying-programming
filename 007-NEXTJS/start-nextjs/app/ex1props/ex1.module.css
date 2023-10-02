@@ -1,0 +1,21 @@
+.cabec {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid 5px red;
+}
+.rodp {
+    margin-top: 35%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid 5px green; 
+}
+.hx {
+    color:blue;
+    text-align: center;
+}
+.px {
+    color:green;
+    text-align: center;
+}
