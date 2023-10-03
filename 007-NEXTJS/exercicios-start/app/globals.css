@@ -86,10 +86,6 @@ body {
 }
 
 body {
-  display: flex;
-  flex-direction: column; 
-  justify-content: space-between;
-  min-height: 100vh;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -108,13 +104,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
-
-header, footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  background-color: yellowgreen;
-
 }

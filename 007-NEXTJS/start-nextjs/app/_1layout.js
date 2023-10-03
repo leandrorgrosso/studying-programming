@@ -14,6 +14,9 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body>
+        <header>
+          <h1>Meu Cabeçalho - Header</h1>
+        </header>
         <nav style={{ backgroundColor: "blue", fontSize: "24px" }}>
           <ul>
             <li>
@@ -25,6 +28,9 @@ export default function RootLayout({ children }) {
           </ul>
         </nav>
         {children}
+        <footer>
+          <h1>Meu Rodapé - Footer</h1>
+        </footer>
       </body>
     </html>
   );
