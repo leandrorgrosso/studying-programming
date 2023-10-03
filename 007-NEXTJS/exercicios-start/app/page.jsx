@@ -1,10 +1,10 @@
-import Linha from '@/components/Linha'
-import styles from './page.module.css'
+import Tabuleiro from "../components/Tabuleiro";
+import styles from "../app/page.module.css";
 
 export default function Home() {
   return (
-    <>
-    <Linha />
-    </>
-    )
+    <div className={styles.container}>
+      <Tabuleiro />
+    </div>
+  );
 }

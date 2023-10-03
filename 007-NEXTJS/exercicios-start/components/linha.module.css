@@ -1,5 +1,4 @@
-.casaTabuleiro{
-    width: 100px;
-    height: 100px;
-    background-color: blue;
+.linha {
+  display: flex;
+  justify-content: center;  
 }

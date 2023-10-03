@@ -1,19 +1,17 @@
-import styles from "@/components/linha.module.css"
+import styles from "../components/Linha.module.css";
+import CasaTabuleiro from "./CasaTabuleiro";
 
-const Linha = () => {
+export default function Linha(props) {
   return (
     <div className={styles.linha}>
-    <div>Linha</div>
-    <Casa/>
-    <Casa preta/>
-    <Casa/>
-    <Casa preta/>
-    <Casa/>
-    <Casa preta/>
-    <Casa/>
-    <Casa preta/>
+      <CasaTabuleiro preta={props.preta} />
+      <CasaTabuleiro preta={!props.preta} />
+      <CasaTabuleiro preta={props.preta} />
+      <CasaTabuleiro preta={!props.preta} />
+      <CasaTabuleiro preta={props.preta} />
+      <CasaTabuleiro preta={!props.preta} />
+      <CasaTabuleiro preta={props.preta} />
+      <CasaTabuleiro preta={!props.preta} />
     </div>
-  )
+  );
 }
-
-export default Linha
