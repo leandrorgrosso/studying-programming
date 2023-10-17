@@ -2,7 +2,7 @@ import styles from "@/app/page.module.css"
 
 import { useState } from 'react';
 
-const ImageGallery = ({ imageUrls }) => {
+function ImageGallery  ( props )  {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const openImage = (imageUrl) => {
@@ -17,12 +17,13 @@ const ImageGallery = ({ imageUrls }) => {
 
     <>
       <div className={styles.imageGallery}>
-        {imageUrls.map((imageUrl, index) => (
+        {props.imageUrls.map((imageUrl, index) => (
           <div
             key={index}
             className={styles.imageThumbnail}
             onClick={() => openImage(imageUrl)}
           >
+            
             <img src={imageUrl} alt={`Image ${index}`} />
           </div>
         ))}
