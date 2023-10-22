@@ -5,11 +5,11 @@ import { useState } from "react";
 function PaginaProps() {
   const [name, setName] = useState("Usando Com Props");
 
-  function FilhoUm({changeName}) {
-    return <FilhoDois changeName={changeName}/>;
+  function FilhoComponenteUm({changeName}) {
+    return <FilhoComponenteDois changeName={changeName}/>;
   }
 
-  function FilhoDois({changeName}) {
+  function FilhoComponenteDois({changeName}) {
     return (
       <button onClick={() => changeName("texto aqui...")}>Cliqne no Botão</button>
     );
@@ -19,7 +19,7 @@ function PaginaProps() {
     <>      
       <h1>Página com Props</h1>
       <div>{name}</div>
-      <FilhoUm changeName={setName}/>
+      <FilhoComponenteUm changeName={setName}/>
     </>
   );
 }
