@@ -1,25 +1,29 @@
-"use client"
+"use client";
 
-// page1.js
-import { useState } from 'react';
-import Link from 'next/link';
+import Link from "next/link";
 
-export default function Page1() {
-  const [inputValue, setInputValue] = useState('');
-
+function Pagina1() {
   return (
-    <div>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <Link href={{ pathname: '/pagina2', query: { inputValue } }}>
-        Navegar para a página 2
-      </Link>
-      <Link href={{ pathname: '/pagina3', query: { inputValue } }}>
-        Navegar para a página 3
-      </Link>
-    </div>
+    <>
+      <div style={{ backgroundColor: "silver" }}>
+        <nav>
+          <ul>
+            <li>
+              <Link href="/pagina1">Pagina 1</Link>
+            </li>
+            <li>
+              <Link href="/pagina2">Pagina 2</Link>
+            </li>
+            <li>
+              <Link href="/pagina3">Pagina 3</Link>
+            </li>
+          </ul>
+        </nav>
+        <p></p>
+      </div>
+      <h1>Página 1</h1>
+    </>
   );
 }
+
+export default Pagina1;

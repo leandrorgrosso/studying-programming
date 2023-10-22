@@ -1,18 +1,29 @@
-"use client"
+"use client";
 
-import Link from 'next/link';
+import Link from "next/link";
 
-const Page2 = ({ valueFromPage1 }) => (
-  <div>
-    <h1>Página 2</h1>
-    <p>Valor da Página 1: {valueFromPage1}</p>
-    <Link href="/pagina1">Voltar para a Página 1</Link>
-  </div>
-);
+function Pagina2() {
+  return (
+    <>
+      <div style={{ backgroundColor: "silver" }}>
+        <nav>
+          <ul>
+            <li>
+              <Link href="/pagina1">Pagina 1</Link>
+            </li>
+            <li>
+              <Link href="/pagina2">Pagina 2</Link>
+            </li>
+            <li>
+              <Link href="/pagina3">Pagina 3</Link>
+            </li>
+          </ul>
+        </nav>
+        <p></p>
+      </div>
+      <h1>Página 2</h1>
+    </>
+  );
+}
 
-Page2.getInitialProps = ({ query }) => {
-  const { value } = query;
-  return { valueFromPage1: value };
-};
-
-export default Page2;
+export default Pagina2;
