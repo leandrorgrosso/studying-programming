@@ -1,6 +1,6 @@
 "use client"
 
-import { UserProvider } from '@/context/UserContext';
+import { UserProvider } from '@/contexts/UserContext';
 import LoginLogout from '@/components/LoginLogout';
 
 function Home() {

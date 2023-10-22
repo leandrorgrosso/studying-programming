@@ -1,6 +1,6 @@
-import { useUser } from '@/context/UserContext';
+import { useUser } from '@/contexts/UserContext';
 
-const LoginLogout = () => {
+function LoginLogout (){
   const { user, login, logout } = useUser();
 
   return (

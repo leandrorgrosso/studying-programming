@@ -1,6 +1,8 @@
 "use client";
 
+import { LoggedUserProvider } from "@/contexts/LoggedUserContext";
 import ImageGallery from "../components/ImageGallery";
+import Header from "@/components/Header";
 
 const imageUrls = [
   "https://png.pngtree.com/background/20230614/original/pngtree-landscape-hd-wallpaper-backgrounds-best-wallpaper-picture-image_3537443.jpg",
@@ -12,8 +14,11 @@ const imageUrls = [
 export default function Home() {
   return (
     <>
-      <h1>Minha Galeria de Imagens</h1>
-      <ImageGallery imageUrls={imageUrls} />
+      <LoggedUserProvider>
+        <Header />
+        <h1>Minha Galeria de Imagens</h1>
+        <ImageGallery imageUrls={imageUrls} />
+      </LoggedUserProvider>
     </>
   );
 }
