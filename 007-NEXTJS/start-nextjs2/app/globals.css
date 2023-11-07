@@ -38,3 +38,23 @@
   color: #fff;
   cursor: pointer;
 } */
+
+.panel-dark{
+  background-color: black;
+  color: white;
+}
+
+.panel-light{
+  background-color: white;
+  color: black;
+}
+
+.button-dark {
+  background-color: white;
+  color: black;
+
+}
+.button-light {
+  background-color: black;
+  color: white;
+}
