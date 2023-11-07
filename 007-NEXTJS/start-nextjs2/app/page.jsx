@@ -1,6 +1,7 @@
 "use client";
-
-import { LoggedUserProvider } from "@/contexts/LoggedUserContext";
+import { useContext } from "react";
+import { LoggedUserContext } from "@/contexts/LoggedUserContext";
+import { LoggedUserProvider } from "@/contexts/LoggedUserContext"
 import ImageGallery from "../components/ImageGallery";
 import Header from "@/components/Header";
 
@@ -11,14 +12,38 @@ const imageUrls = [
   // Adicione mais URLs de imagens conforme necessário
 ];
 
+// function UserProfile() {
+//   const { name } = useContext(LoggedUserContext);
+
+//   return (
+//     <div>
+//       <h2>Seu nome é: {name}</h2>
+//     </div>
+//   );
+// }
+
 export default function Home() {
   return (
     <>
+
       <LoggedUserProvider>
+        {/* <UserProfile/> */}
         <Header />
         <h1>Minha Galeria de Imagens</h1>
         <ImageGallery imageUrls={imageUrls} />
       </LoggedUserProvider>
+
+      <iframe
+        width="420"
+        height="345"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+      ></iframe>
+
+<video width="320" height="240" controls>
+  <source src="/WIN_20230914_14_04_47_Pro.mp4" type="video/mp4"/>
+ 
+  Your browser does not support the video tag.
+</video>
     </>
   );
 }
