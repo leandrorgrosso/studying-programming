@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import styles from "@/styles/home.module.css";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [users, setUsers] = useState([]);
 
   const getUsers = async () => {
-    setLoading(true)
+    setLoading(true);
 
     try {
       const resposta = await fetch(
@@ -26,20 +27,24 @@ const Home = () => {
   }, []);
 
   return (
-    <>
-      <h1>Lista de Usuários</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Lista de Usuários</h1>
       <div>
-        {loading && "Carregando..."}
+        {loading && <div className={styles.loader}>Carregando...</div>}
         {!loading && users.length > 0 && (
-          <ul>
+          <ul className={styles.userList}>
             {users.map((item) => (
-              <li key={item.id}>{item.name}</li>
+              <li key={item.id} className={styles.userItem}>
+                {item.name}
+              </li>
             ))}
           </ul>
         )}
-        {!loading && users.length === 0 && "Não há usuários para exibir"}
+        {!loading && users.length === 0 && (
+          <div className={styles.errorMessage}>Não há usuários para exibir</div>
+        )}
       </div>
-    </>
+    </div>
   );
 };
 
