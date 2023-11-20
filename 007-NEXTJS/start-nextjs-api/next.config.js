@@ -1,4 +1,20 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
+const nextConfig = {
+    images: {
+      domains: [
+        "https://jsonplaceholder.typicode.com/photos",
+        "https://via.placeholder.com",
+      ],
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "via.placeholder.com",
+          port: "",
+          pathname: "/**",
+        },
+      ],
+    },
+  };
+  
+  module.exports = nextConfig;
+  
