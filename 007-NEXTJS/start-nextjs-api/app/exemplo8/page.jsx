@@ -15,7 +15,7 @@ const Home = () => {
         throw new Error("Erro ao buscar endereço");
       }
 
-      const data = await response.json();
+      const data = await resposta.json();
       setAddress(data);
     } catch (error) {
       console.error("Erro ao buscar endereço:", error.message);
