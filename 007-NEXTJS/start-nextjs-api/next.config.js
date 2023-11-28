@@ -4,11 +4,13 @@ const nextConfig = {
       domains: [
         "https://jsonplaceholder.typicode.com/photos",
         "https://via.placeholder.com",
+        'http://i.annihil.us',
       ],
       remotePatterns: [
         {
           protocol: "https",
-          hostname: "via.placeholder.com",
+          hostname: "via.placeholder.com", 
+          // hostname: "i.annihil.us", 
           port: "",
           pathname: "/**",
         },
