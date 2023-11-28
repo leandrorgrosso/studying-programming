@@ -13,10 +13,6 @@ const PaginaPokemon = () => {
       const resposta = await fetch(
         `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
       );
-      if (!resposta.ok) {
-        throw new Error(`Falha na busca Pokemon: ${response.statusText}`);
-      }
-
       const data = await resposta.json();
       setPokemon(data);
       setError(null);
@@ -32,7 +28,7 @@ const PaginaPokemon = () => {
       <input
         type="number"
         value={pokemonId}
-        onChange={(e) => setPokemonId(e.target.value)}
+        onChange={(event) => setPokemonId(event.target.value)}
       />
       <button onClick={getPokemon}>Pegue Pokemon</button>
 

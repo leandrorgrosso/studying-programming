@@ -5,23 +5,20 @@ import Image from "next/image";
 const Home = () => {
   const [photos, setPhotos] = useState([]);
 
+  const getPhotos = async () => {
+    try {
+      const resposta = await fetch(
+        "https://jsonplaceholder.typicode.com/photos"
+      );
+      
+      const data = await resposta.json();
+      setPhotos(data);
+    } catch (error) {
+      console.error("Erro ao buscar fotos:", error.message);
+    }
+  };
+
   useEffect(() => {
-    const getPhotos = async () => {
-      try {
-        const resposta = await fetch(
-          "https://jsonplaceholder.typicode.com/photos"
-        );
-        if (!resposta.ok) {
-          throw new Error("Erro ao buscar fotos");
-        }
-
-        const data = await resposta.json();
-        setPhotos(data);
-      } catch (error) {
-        console.error("Erro ao buscar fotos:", error.message);
-      }
-    };
-
     getPhotos();
   }, []);
 

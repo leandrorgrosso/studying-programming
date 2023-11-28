@@ -5,23 +5,23 @@ import { useEffect, useState } from "react";
 const Home = () => {
   const [users, setUsers] = useState([]);
 
+  const getUsers = async () => {
+    try {
+      const resposta = await fetch(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+      // if (!resposta.ok) {
+      //   throw new Error("Erro ao buscar usuários");
+      // }
+
+      const data = await resposta.json();
+      setUsers(data);
+    } catch (error) {
+      console.error("Erro ao buscar usuários:", error.message);
+    }
+  };
+
   useEffect(() => {
-    const getUsers = async () => {
-      try {
-        const resposta = await fetch(
-          "https://jsonplaceholder.typicode.com/users"
-        );
-        if (!resposta.ok) {
-          throw new Error("Erro ao buscar usuários");
-        }
-
-        const data = await resposta.json();
-        setUsers(data);
-      } catch (error) {
-        console.error("Erro ao buscar usuários:", error.message);
-      }
-    };
-
     getUsers();
   }, []);
 

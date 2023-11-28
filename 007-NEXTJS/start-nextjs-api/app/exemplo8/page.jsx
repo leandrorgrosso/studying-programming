@@ -11,9 +11,9 @@ const Home = () => {
   const getAddress = async () => {
     try {
       const resposta = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-      if (!resposta.ok) {
-        throw new Error("Erro ao buscar endereço");
-      }
+      // if (!resposta.ok) {
+      //   throw new Error("Erro ao buscar endereço");
+      // }
 
       const data = await resposta.json();
       setAddress(data);
