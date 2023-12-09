@@ -1,6 +1,6 @@
 .body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   min-height: 100vh;
   margin: 0;
@@ -8,19 +8,32 @@
 
 .container {
   flex: 1;
-  min-height: 70vh;
+  /* min-height: 70vh; */
 }
 
 .navbar {
+  display: flex;
+  flex: 1;
   background-color: #666;
   padding: 1rem;
-  display: flex;
   justify-content: space-around;
   list-style: none;
 }
 
 .navbar li {
+  margin-bottom: 10px;
   margin: 0;
   padding: 0;
   cursor: pointer;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
 }
