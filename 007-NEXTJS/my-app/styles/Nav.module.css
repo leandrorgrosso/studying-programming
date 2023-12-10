@@ -1,5 +1,20 @@
-.nav {
+.navbar {
   flex: 0 0 20vw;
   background-color: royalblue;
   padding: 1em;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin-bottom: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
 }
