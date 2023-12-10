@@ -1,7 +1,5 @@
-/* Article.module.css */
 .article {
-    flex: 1;
-    padding: 1em;
-    background-color: darkgrey;
-  }
-  
+  flex: 1;
+  padding: 1em;
+  background-color: darkgrey;
+}

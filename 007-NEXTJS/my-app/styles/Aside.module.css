@@ -1,7 +1,5 @@
-/* Aside.module.css */
 .aside {
-    flex: 0 0 20vw;
-    background-color: steelblue;
-    padding: 1em;
-  }
-  
+  flex: 0 0 20vw;
+  background-color: steelblue;
+  padding: 1em;
+}

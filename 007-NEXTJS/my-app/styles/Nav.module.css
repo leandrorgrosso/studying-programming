@@ -1,7 +1,5 @@
-/* Nav.module.css */
 .nav {
-    flex: 0 0 20vw;
-    background-color: royalblue;
-    padding: 1em;
-  }
-  
+  flex: 0 0 20vw;
+  background-color: royalblue;
+  padding: 1em;
+}
