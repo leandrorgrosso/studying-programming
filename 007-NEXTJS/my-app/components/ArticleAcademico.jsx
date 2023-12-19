@@ -1,12 +1,11 @@
-import styles from "@/styles/Article.module.css";
-import Curriculo from "./Curriculo";
+import styles from "@/styles/ArticleAcademico.module.css";
+import FormacaoEscolar from "@/components/FormacaoEscolar";
 
 const ArticleAcademico = () => {
   return (
     <>
       <article className={styles.article}>
-        {/* Article */}
-        {/* <Curriculo /> */}
+        <FormacaoEscolar />
       </article>
     </>
   );

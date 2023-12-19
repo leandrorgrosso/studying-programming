@@ -15,7 +15,7 @@ const Academico = () => {
         <div className={styles.main}>
           {/* <div>Pagina Academico</div> */}
           <Nav />
-          <ArticleAcademico/>
+          <ArticleAcademico />
           {/* <Article /> */}
           {/* <Aside /> */}
         </div>
